@@ -25,11 +25,24 @@ export default function ChapterHero({
   return (
     <div
       style={{
-        background: region.theme.bg,
+        backgroundImage: `url('/chapters/${region.slug}.webp'), ${region.theme.bg}`,
+        backgroundSize: "cover, cover",
+        backgroundPosition: "center top, center",
+        backgroundRepeat: "no-repeat, no-repeat",
         padding: "1.25rem",
         position: "relative",
       }}
     >
+      {/* Vignette so text is always readable over any hero image */}
+      <div style={{
+        position: "absolute",
+        inset: 0,
+        background: "linear-gradient(to bottom, rgba(14,13,11,0.55) 0%, rgba(14,13,11,0.4) 50%, rgba(14,13,11,0.7) 100%)",
+        pointerEvents: "none",
+      }} />
+
+      {/* All content sits above the vignette */}
+      <div style={{ position: "relative", zIndex: 1 }}>
       {/* Top row: Home button + Spoiler toggle */}
       <div
         style={{
@@ -187,6 +200,7 @@ export default function ChapterHero({
           </Link>
         )}
       </div>
+      </div>{/* end zIndex wrapper */}
     </div>
   );
 }

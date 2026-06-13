@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Sculptor's Idol",
-  description: "Rest. Remember. Resurrect. — Pam's Sekiro companion.",
+  title: "Sekiro — Sculptor's Idol",
+  description: "Rest. Remember. Resurrect. — A Sekiro: Shadows Die Twice companion for Pam.",
 };
 
 export default function RootLayout({
@@ -21,7 +21,20 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <footer style={{
+          borderTop: "1px solid #2A2724",
+          padding: "1rem 1.25rem",
+          textAlign: "center",
+          color: "#9B9488",
+          fontSize: "0.7rem",
+          letterSpacing: "0.04em",
+          fontFamily: "Inter, sans-serif",
+        }}>
+          Made with ♥️ by Avi &nbsp;·&nbsp; Sekiro: Shadows Die Twice
+        </footer>
+      </body>
     </html>
   );
 }

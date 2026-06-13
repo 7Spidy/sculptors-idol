@@ -30,7 +30,7 @@ export default function AllDoneScreen() {
       </h2>
 
       <p style={{ color: "#9B9488", fontSize: "0.9rem", lineHeight: 1.7, maxWidth: "300px" }}>
-        You walked the path and kept every promise.
+        You walked every path Sekiro walked, and kept every promise.
         <br />
         Ashina endures because of you, Pam.
       </p>

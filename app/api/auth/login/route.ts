@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import bcrypt from "bcryptjs";
+import { timingSafeEqual } from "crypto";
 import { getIronSession } from "iron-session";
 import { cookies } from "next/headers";
 import { sessionOptions, type SessionData } from "@/lib/session";
@@ -13,12 +13,15 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Password required" }, { status: 400 });
     }
 
-    const hash = process.env.SITE_PASSWORD_HASH;
-    if (!hash) {
+    const stored = process.env.SITE_PASSWORD;
+    if (!stored) {
       return NextResponse.json({ error: "Server misconfiguration" }, { status: 500 });
     }
 
-    const match = bcrypt.compareSync(password, hash);
+    const a = Buffer.from(password);
+    const b = Buffer.from(stored);
+    const match = a.length === b.length && timingSafeEqual(a, b);
+
     if (!match) {
       return NextResponse.json({ error: "Incorrect password" }, { status: 401 });
     }

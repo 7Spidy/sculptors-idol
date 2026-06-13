@@ -1,7 +1,7 @@
 {
   "$comment": "Sculptor's Idol — complete content based on Torllay's Steam guide (id=3345726654). 19 chapters matching the exact guide order. 'isNavCue' items are amber warning banners (not regular checkboxes) that route Pam to another chapter before continuing. returnPath:true marks Return-ending required steps.",
   "meta": {
-    "siteName": "Sculptor's Idol",
+    "siteName": "Sekiro — Sculptor's Idol",
     "tagline": "Rest. Remember. Resurrect.",
     "subtitle": "Pam's guide through Ashina — the Return / Dragon's Homecoming ending.",
     "endingFocus": "Return / Dragon's Homecoming"

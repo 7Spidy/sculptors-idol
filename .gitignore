@@ -1,0 +1,18 @@
+# dependencies
+node_modules/
+
+# Next.js build output
+.next/
+out/
+
+# environment variables — NEVER commit
+.env.local
+.env*.local
+
+# TypeScript
+tsconfig.tsbuildinfo
+next-env.d.ts
+
+# misc
+.DS_Store
+*.pem

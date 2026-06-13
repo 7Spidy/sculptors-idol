@@ -42,23 +42,36 @@ export default function SiteNav({ completedIds, currentSlug = "" }: SiteNavProps
       >
         {/* Logo */}
         <div style={{ display: "flex", flexDirection: "column", minWidth: 0 }}>
-          <span
-            style={{
-              fontFamily: "var(--font-serif, serif)",
-              fontSize: "1rem",
-              fontWeight: 500,
-              color: "#C9A227",
-              whiteSpace: "nowrap",
-              overflow: "hidden",
-              textOverflow: "ellipsis",
-            }}
-          >
-            Sculptor&#39;s Idol
-          </span>
+          <div style={{ display: "flex", alignItems: "baseline", gap: "0.4rem", overflow: "hidden" }}>
+            <span
+              style={{
+                fontFamily: "var(--font-serif, serif)",
+                fontSize: "1.05rem",
+                fontWeight: 500,
+                color: "#C9A227",
+                whiteSpace: "nowrap",
+                letterSpacing: "0.04em",
+              }}
+            >
+              Sekiro
+            </span>
+            <span
+              style={{
+                color: "#9B9488",
+                fontSize: "0.7rem",
+                whiteSpace: "nowrap",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+                fontFamily: "var(--font-serif, serif)",
+              }}
+            >
+              Sculptor&#39;s Idol
+            </span>
+          </div>
           <span
             style={{
               color: "#9B9488",
-              fontSize: "0.65rem",
+              fontSize: "0.6rem",
               letterSpacing: "0.1em",
               textTransform: "uppercase",
             }}
