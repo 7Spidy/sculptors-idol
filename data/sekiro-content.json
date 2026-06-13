@@ -37,6 +37,10 @@
       "order": 1,
       "spoilerRegion": false,
       "blurb": "Where the story begins. A moonlit reservoir, a severed arm, and a choice that sets everything in motion. You cannot win these fights — but you will remember them.",
+      "theme": {
+        "accent": "#4A8AC4",
+        "bg": "linear-gradient(135deg, #050C14 0%, #0A1A2E 50%, #0D2040 100%)"
+      },
       "checklist": [
         { "id": "ar1-01", "text": "Face the scripted encounter with Leader Shigenori Yamauchi.", "spoiler": false, "isNavCue": false },
         { "id": "ar1-02", "text": "Face the scripted encounter with Genichiro Ashina — this is a story moment, not a boss fight you're expected to win.", "spoiler": false, "isNavCue": false }
@@ -67,6 +71,10 @@
       "order": 2,
       "spoilerRegion": false,
       "blurb": "Your base of operations. The Sculptor carves Buddhas to keep the demon at bay. Rest here between battles — this is the last safe place in Ashina.",
+      "theme": {
+        "accent": "#C4922A",
+        "bg": "linear-gradient(135deg, #1A1206 0%, #2A1E08 50%, #3A2A10 100%)"
+      },
       "checklist": [
         { "id": "dt-01", "text": "Talk to the Sculptor and receive the prosthetic arm.", "spoiler": false },
         { "id": "dt-02", "text": "Talk to Emma, the physician tending to the Sculptor.", "spoiler": false },
@@ -81,6 +89,10 @@
       "order": 3,
       "spoilerRegion": false,
       "blurb": "A road of fire, broken soldiers, and the first real lessons in deflection. Every fight here teaches something. Gyoubu at the gate is the first true test.",
+      "theme": {
+        "accent": "#C4602A",
+        "bg": "linear-gradient(135deg, #0E0C0A 0%, #1E1008 50%, #2E1A0A 100%)"
+      },
       "checklist": [
         { "id": "ao-01", "text": "Find the Loaded Shuriken prosthetic along the early path.", "spoiler": false },
         { "id": "ao-02", "text": "Face Minor Boss: General Naomori Kawarada.", "spoiler": false },
@@ -142,6 +154,10 @@
       "order": 4,
       "spoilerRegion": false,
       "blurb": "A memory of fire. Use the Bell Charm at the Buddha statue to enter. Rich in prosthetics, masks, and one of the game's defining duels. Lady Butterfly is the wall that teaches aggression.",
+      "theme": {
+        "accent": "#C43A3A",
+        "bg": "linear-gradient(135deg, #1A0808 0%, #2A0C0C 50%, #3A1010 100%)"
+      },
       "checklist": [
         { "id": "he1-01", "text": "Kill the Treasure Carps in the estate waterway.", "spoiler": false },
         { "id": "he1-02", "text": "Meet Pot Noble Harunaga at the riverbank.", "spoiler": false },
@@ -190,6 +206,10 @@
       "order": 5,
       "spoilerRegion": false,
       "blurb": "The heart of the realm. A brief but important first pass — grab the Gatehouse Key, deal with the Bull, and scout the routes before things get complicated.",
+      "theme": {
+        "accent": "#6A8AA8",
+        "bg": "linear-gradient(135deg, #06080C 0%, #0C1018 50%, #101520 100%)"
+      },
       "checklist": [
         { "id": "ac1-01", "text": "Face Minor Boss: Blazing Bull at the castle entrance.", "spoiler": false },
         { "id": "ac1-02", "text": "Get the Gatehouse Key from the room near the castle gate.", "spoiler": false },
@@ -213,6 +233,10 @@
       "order": 6,
       "spoilerRegion": false,
       "blurb": "Back at the beginning — but now there are new threats in the water and old paths to explore. The reservoir connects the castle to the dungeon below.",
+      "theme": {
+        "accent": "#2A8A8A",
+        "bg": "linear-gradient(135deg, #060E0E 0%, #0A1818 50%, #0E2020 100%)"
+      },
       "checklist": [
         { "id": "ar2-01", "text": "Enter the house near the start of the game and obtain Gyoubu's Broken Horn.", "spoiler": false },
         { "id": "ar2-02", "text": "Face Minor Boss: Seven Ashina Spears (Shikibu Toshikatsu Yamauchi) in the reservoir area.", "spoiler": false },
@@ -247,6 +271,10 @@
       "order": 7,
       "spoilerRegion": false,
       "blurb": "Climbing the castle toward Kuro and Genichiro. Do items 1–7, then stop. You are not ready for Genichiro yet — two areas must be explored first.",
+      "theme": {
+        "accent": "#A08A3A",
+        "bg": "linear-gradient(135deg, #1A1608 0%, #24200A 50%, #30280E 100%)"
+      },
       "checklist": [
         { "id": "ac2-01", "text": "Face Minor Boss: General Kuranosuke Matsumoto at the top of the castle stairs.", "spoiler": false },
         { "id": "ac2-02", "text": "Rescue Fujioka the Info Broker (trapped near the samurai); speak to him for the Nightjar Beacon Memo. He moves to the Dilapidated Temple and sells a Gourd Seed for 2000 sen.", "spoiler": false },
@@ -297,6 +325,10 @@
       "order": 8,
       "spoilerRegion": false,
       "blurb": "A grim underground prison beneath the castle. Short but dense with items, merchants, and a NPC quest that shapes a character's fate. Do this before Senpou Temple.",
+      "theme": {
+        "accent": "#7A4AA8",
+        "bg": "linear-gradient(135deg, #08040E 0%, #100818 50%, #180C22 100%)"
+      },
       "checklist": [
         { "id": "ad-01", "text": "Buy Mask Fragment: Dragon from the Dungeon Memorial Mob at the entrance for 5000 sen.", "spoiler": false },
         { "id": "ad-02", "text": "Buy a Prayer Bead from the same merchant.", "spoiler": false },
@@ -323,6 +355,10 @@
       "order": 9,
       "spoilerRegion": false,
       "blurb": "A misty mountaintop of corrupt monks — and where the Return path truly begins. Do items 1–8 now. Fight Genichiro first (Chapter 7), then return for items 9 onward.",
+      "theme": {
+        "accent": "#3A8A5A",
+        "bg": "linear-gradient(135deg, #040E08 0%, #081A0E 50%, #0C2014 100%)"
+      },
       "checklist": [
         { "id": "st-01", "text": "Speak to Kotaro (the large, friendly monk).", "spoiler": false },
         { "id": "st-02", "text": "Loot the Gourd Seed from the room with the monks and crickets.", "spoiler": false },
@@ -378,6 +414,10 @@
       "order": 10,
       "spoilerRegion": true,
       "blurb": "Mortal Blade in hand. The castle now connects to Sunken Valley — and Isshin himself has things to say. A pivotal chapter before the wider world opens.",
+      "theme": {
+        "accent": "#8A742A",
+        "bg": "linear-gradient(135deg, #0E0C06 0%, #1A1608 50%, #201A0A 100%)"
+      },
       "checklist": [
         { "id": "ac3-01", "text": "After gaining the Mortal Blade, teleport to the top of Ashina Castle. Drop from the roof into the moat, grapple out, cross the bridge, and use the Gun Fort Shrine Key to open the shrine. Speak to the Tengu of Ashina.", "spoiler": true },
         { "id": "ac3-02", "text": "Go to the Great Serpent Shrine and cross into Sunken Valley.", "spoiler": true },
@@ -393,6 +433,10 @@
       "order": 11,
       "spoilerRegion": true,
       "blurb": "Sheer snowy cliffs, sniper-heavy gauntlets, and the terrifying first encounter with a great serpent that guards the Gun Fort. Move carefully — the snipers here are brutal.",
+      "theme": {
+        "accent": "#4A7AAA",
+        "bg": "linear-gradient(135deg, #060810 0%, #0A0E1A 50%, #0E1220 100%)"
+      },
       "checklist": [
         { "id": "sv-01", "text": "Light the Sunken Valley Sculptor's Idols; pick your way across the cliff ledges past the riflemen.", "spoiler": true },
         { "id": "sv-02", "text": "Survive the first Great Serpent encounter on the bridge approach to the Gun Fort.", "spoiler": true },
@@ -418,6 +462,10 @@
       "order": 12,
       "spoilerRegion": true,
       "blurb": "The valley below — poison swamps, toxic enemies, and a boss that defies expectation in more ways than one. One of the game's most memorable fights.",
+      "theme": {
+        "accent": "#5A7A3A",
+        "bg": "linear-gradient(135deg, #080C06 0%, #0E1408 50%, #121A0A 100%)"
+      },
       "checklist": [
         { "id": "svp-01", "text": "Descend into Bodhisattva Valley and navigate the poison pool area.", "spoiler": true },
         { "id": "svp-02", "text": "Face Minor Boss: Snake Eyes Shirahagi in the cave/passage area near the poison pools.", "spoiler": true },
@@ -452,6 +500,10 @@
       "order": 13,
       "spoilerRegion": true,
       "blurb": "One of Sekiro's most atmospheric areas. The Hidden Forest is a fog-drenched illusion maze — find what's causing it. Then deeper into the dark.",
+      "theme": {
+        "accent": "#2A5A3A",
+        "bg": "linear-gradient(135deg, #020604 0%, #060E08 50%, #0A140C 100%)"
+      },
       "checklist": [
         { "id": "depth-01", "text": "Enter the Hidden Forest and navigate the illusory mist without panicking.", "spoiler": true },
         { "id": "depth-02", "text": "Face Minor Boss: Tokujiro the Glutton in the forest.", "spoiler": true },
@@ -485,6 +537,10 @@
       "order": 14,
       "spoilerRegion": true,
       "blurb": "A flooded village of possessed inhabitants under moonlight. Eerie and beautiful. The second story ingredient is here — guarded by the first Corrupted Monk.",
+      "theme": {
+        "accent": "#2A5A7A",
+        "bg": "linear-gradient(135deg, #04080C 0%, #060E14 50%, #0A1420 100%)"
+      },
       "checklist": [
         { "id": "mv-01", "text": "Navigate Mibu Village — collect the Prayer Beads, Gourd Seed, and Mibu Balloon vendor stock.", "spoiler": true },
         { "id": "mv-02", "text": "Find and interact with Jinzaemon Kumano at the village waterfall (if alive from the dungeon quest).", "spoiler": true },
@@ -510,6 +566,10 @@
       "order": 15,
       "spoilerRegion": true,
       "blurb": "The castle is under assault. New enemies everywhere. And a rooftop choice that determines the rest of your journey — choose Kuro. NEVER choose Owl.",
+      "theme": {
+        "accent": "#AA2A2A",
+        "bg": "linear-gradient(135deg, #0C0404 0%, #180606 50%, #220808 100%)"
+      },
       "checklist": [
         { "id": "ac4-01", "text": "Return to the castle — find it under invasion. Fight through the new enemies.", "spoiler": true },
         { "id": "ac4-02", "text": "Face Minor Boss: Lone Shadow Vilehand in the castle grounds.", "spoiler": true },
@@ -553,6 +613,10 @@
       "order": 16,
       "spoilerRegion": true,
       "blurb": "A second, darker memory of the estate. The past holds one more secret — and one more formidable shadow of the Owl. Optional for the Return path, but gives Prayer Beads.",
+      "theme": {
+        "accent": "#8A1A2A",
+        "bg": "linear-gradient(135deg, #0C0206 0%, #160408 50%, #1E060C 100%)"
+      },
       "checklist": [
         { "id": "he2-01", "text": "Ring the bell again to enter the second Hirata memory (must have the bell from a specific source).", "spoiler": true },
         { "id": "he2-02", "text": "Navigate the darker version of the estate — new enemies, new paths.", "spoiler": true },
@@ -586,6 +650,10 @@
       "order": 17,
       "spoilerRegion": true,
       "blurb": "The most beautiful place in Ashina — an ethereal heavenly realm above the clouds. The Return path has one unmissable step here: get the Frozen Tears BEFORE finishing the palace.",
+      "theme": {
+        "accent": "#C4828A",
+        "bg": "linear-gradient(135deg, #140610 0%, #200A1A 50%, #2C0E22 100%)"
+      },
       "checklist": [
         { "id": "fp-01", "text": "Enter Fountainhead Palace and light its Sculptor's Idols.", "spoiler": true },
         { "id": "fp-02", "text": "Collect Prayer Beads and the Gourd Seed throughout the palace.", "spoiler": true },
@@ -639,6 +707,10 @@
       "order": 18,
       "spoilerRegion": true,
       "blurb": "Ashina is burning. Both the reservoir and outskirts are transformed by war and fire. New and returning enemies spawn everywhere. An optional masterpiece of a boss waits in the flames.",
+      "theme": {
+        "accent": "#C4622A",
+        "bg": "linear-gradient(135deg, #140806 0%, #201008 50%, #2C160A 100%)"
+      },
       "checklist": [
         { "id": "eg-01", "text": "Return to the burning Ashina — explore the reservoir and outskirts in their final state.", "spoiler": true },
         { "id": "eg-02", "text": "Face new/respawned minibosses in the changed areas — collect their Prayer Beads.", "spoiler": true },
@@ -664,6 +736,10 @@
       "order": 19,
       "spoilerRegion": true,
       "blurb": "The final exam. Four phases, everything the game has taught you. And at the end — a choice. Give Kuro the Frozen Tears. Not the Dragon's Tears. The Frozen Tears.",
+      "theme": {
+        "accent": "#C9A227",
+        "bg": "linear-gradient(135deg, #100E06 0%, #1A1808 50%, #24200C 100%)"
+      },
       "checklist": [
         { "id": "end-01", "text": "Face Boss: Isshin, the Sword Saint — four phases, the hardest fight in the game. Max your stats, bring Pacifying Agents, and use every technique you've learned.", "spoiler": true },
         { "id": "end-02", "text": "RETURN PATH — FINAL CHOICE: When prompted, give Kuro the Frozen Tears. This triggers the Dragon's Homecoming ending.", "spoiler": true, "returnPath": true },
