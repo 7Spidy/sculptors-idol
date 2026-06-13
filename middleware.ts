@@ -5,7 +5,7 @@ import { sessionOptions, type SessionData } from "@/lib/session";
 export async function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
-  // Allow login page and auth API routes
+  // Allow login page and all auth API routes (login, logout, readonly)
   if (pathname === "/login" || pathname.startsWith("/api/auth/")) {
     return NextResponse.next();
   }

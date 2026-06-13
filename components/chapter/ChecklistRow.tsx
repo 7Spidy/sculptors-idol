@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { ChecklistItem } from "@/lib/content";
 import ReturnBadge from "@/components/ui/ReturnBadge";
+import { useSessionMode } from "@/lib/SessionContext";
 
 interface ChecklistRowProps {
   item: ChecklistItem;
@@ -16,10 +17,13 @@ interface ChecklistRowProps {
 export default function ChecklistRow({ item, checked, spoilersOn, onToggle, index }: ChecklistRowProps) {
   const [revealed, setRevealed] = useState(false);
   const shouldReduce = useReducedMotion();
+  const mode = useSessionMode();
+  const isReadonly = mode === "readonly";
 
   const isBlurred = item.spoiler && !spoilersOn && !revealed;
 
   function handleTextClick() {
+    if (isReadonly) return;
     if (isBlurred) {
       setRevealed(true);
       return;
@@ -28,6 +32,7 @@ export default function ChecklistRow({ item, checked, spoilersOn, onToggle, inde
 
   function handleCheckboxClick(e: React.MouseEvent) {
     e.stopPropagation();
+    if (isReadonly) return;
     if (isBlurred) {
       setRevealed(true);
       return;
@@ -56,6 +61,7 @@ export default function ChecklistRow({ item, checked, spoilersOn, onToggle, inde
       <button
         onClick={handleCheckboxClick}
         aria-label={checked ? "Mark incomplete" : "Mark complete"}
+        disabled={isReadonly}
         style={{
           flexShrink: 0,
           width: "18px",
@@ -64,7 +70,7 @@ export default function ChecklistRow({ item, checked, spoilersOn, onToggle, inde
           border: `1.5px solid ${checked ? "#4A7A6A" : "#2A2724"}`,
           borderRadius: "3px",
           background: checked ? "rgba(74,122,106,0.15)" : "transparent",
-          cursor: "pointer",
+          cursor: isReadonly ? "default" : "pointer",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -72,6 +78,7 @@ export default function ChecklistRow({ item, checked, spoilersOn, onToggle, inde
           padding: 0,
           minWidth: "18px",
           minHeight: "18px",
+          opacity: isReadonly ? 0.5 : 1,
         }}
       >
         {checked && (

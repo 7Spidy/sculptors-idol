@@ -29,6 +29,7 @@ export async function POST(req: NextRequest) {
     const cookieStore = await cookies();
     const session = await getIronSession<SessionData>(cookieStore, sessionOptions);
     session.isLoggedIn = true;
+    session.mode = "full";
     await session.save();
 
     return NextResponse.json({ ok: true });

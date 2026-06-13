@@ -1,4 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
+import { getIronSession } from "iron-session";
+import { cookies } from "next/headers";
+import { sessionOptions, type SessionData } from "@/lib/session";
 import { getProgress, toggleItem } from "@/lib/progress";
 
 export async function GET() {
@@ -14,6 +17,12 @@ export async function GET() {
 
 export async function POST(req: NextRequest) {
   try {
+    const cookieStore = await cookies();
+    const session = await getIronSession<SessionData>(cookieStore, sessionOptions);
+    if (session.mode === "readonly") {
+      return NextResponse.json({ error: "Read-only mode" }, { status: 405 });
+    }
+
     const body = await req.json();
     const { id, checked } = body as { id: string; checked: boolean };
 

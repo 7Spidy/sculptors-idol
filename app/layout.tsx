@@ -1,4 +1,8 @@
 import type { Metadata } from "next";
+import { cookies } from "next/headers";
+import { getIronSession } from "iron-session";
+import { sessionOptions, type SessionData } from "@/lib/session";
+import { SessionProvider } from "@/lib/SessionContext";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -6,11 +10,15 @@ export const metadata: Metadata = {
   description: "Rest. Remember. Resurrect. — A Sekiro: Shadows Die Twice companion for Pam.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const cookieStore = await cookies();
+  const session = await getIronSession<SessionData>(cookieStore, sessionOptions);
+  const mode = session.mode ?? "full";
+
   return (
     <html lang="en">
       <head>
@@ -22,18 +30,20 @@ export default function RootLayout({
         />
       </head>
       <body>
-        {children}
-        <footer style={{
-          borderTop: "1px solid #2A2724",
-          padding: "1rem 1.25rem",
-          textAlign: "center",
-          color: "#9B9488",
-          fontSize: "0.7rem",
-          letterSpacing: "0.04em",
-          fontFamily: "Inter, sans-serif",
-        }}>
-          Made with ♥️ by Avi &nbsp;·&nbsp; Sekiro: Shadows Die Twice
-        </footer>
+        <SessionProvider mode={mode}>
+          {children}
+          <footer style={{
+            borderTop: "1px solid #2A2724",
+            padding: "1rem 1.25rem",
+            textAlign: "center",
+            color: "#9B9488",
+            fontSize: "0.7rem",
+            letterSpacing: "0.04em",
+            fontFamily: "Inter, sans-serif",
+          }}>
+            Made with ♥️ by Avi &nbsp;·&nbsp; Sekiro: Shadows Die Twice
+          </footer>
+        </SessionProvider>
       </body>
     </html>
   );

@@ -2,6 +2,7 @@ import type { SessionOptions } from "iron-session";
 
 export interface SessionData {
   isLoggedIn: boolean;
+  mode?: 'full' | 'readonly';
 }
 
 export const sessionOptions: SessionOptions = {

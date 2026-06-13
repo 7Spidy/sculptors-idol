@@ -7,6 +7,7 @@ export default function LoginPage() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [readonlyLoading, setReadonlyLoading] = useState(false);
   const router = useRouter();
 
   async function handleSubmit(e: FormEvent) {
@@ -32,6 +33,17 @@ export default function LoginPage() {
       setError("Network error — try again.");
     } finally {
       setLoading(false);
+    }
+  }
+
+  async function handleReadOnly() {
+    setReadonlyLoading(true);
+    try {
+      await fetch("/api/auth/readonly", { method: "POST" });
+      router.replace("/");
+      router.refresh();
+    } finally {
+      setReadonlyLoading(false);
     }
   }
 
@@ -221,6 +233,30 @@ export default function LoginPage() {
               {loading ? "Entering…" : "Enter Ashina →"}
             </button>
           </form>
+
+          <button
+            type="button"
+            onClick={handleReadOnly}
+            disabled={readonlyLoading}
+            style={{
+              marginTop: "0.75rem",
+              width: "100%",
+              background: "transparent",
+              color: "#9B9488",
+              border: "1px solid #9B9488",
+              borderRadius: "4px",
+              padding: "0.625rem 1rem",
+              fontSize: "0.8rem",
+              letterSpacing: "0.06em",
+              cursor: readonlyLoading ? "not-allowed" : "pointer",
+              transition: "opacity 0.15s",
+              opacity: readonlyLoading ? 0.5 : 1,
+              minHeight: "40px",
+              fontFamily: "Inter, sans-serif",
+            }}
+          >
+            {readonlyLoading ? "Entering…" : "Enter Read-Only Mode →"}
+          </button>
         </div>
       </div>
     </main>

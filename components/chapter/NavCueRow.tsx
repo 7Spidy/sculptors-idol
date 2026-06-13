@@ -2,6 +2,7 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import { ChecklistItem } from "@/lib/content";
+import { useSessionMode } from "@/lib/SessionContext";
 
 interface NavCueRowProps {
   item: ChecklistItem;
@@ -12,6 +13,7 @@ interface NavCueRowProps {
 
 export default function NavCueRow({ item, ticked, onTick, index }: NavCueRowProps) {
   const shouldReduce = useReducedMotion();
+  const isReadonly = useSessionMode() === "readonly";
 
   return (
     <motion.div
@@ -59,8 +61,9 @@ export default function NavCueRow({ item, ticked, onTick, index }: NavCueRowProp
 
       {/* Tick checkbox */}
       <button
-        onClick={() => onTick(item.id, !ticked)}
+        onClick={() => { if (!isReadonly) onTick(item.id, !ticked); }}
         aria-label={ticked ? "Mark undone" : "Mark done"}
+        disabled={isReadonly}
         style={{
           flexShrink: 0,
           width: "18px",
@@ -69,7 +72,7 @@ export default function NavCueRow({ item, ticked, onTick, index }: NavCueRowProp
           border: `1.5px solid ${ticked ? "#D4860A" : "rgba(212,134,10,0.4)"}`,
           borderRadius: "3px",
           background: ticked ? "rgba(212,134,10,0.2)" : "transparent",
-          cursor: "pointer",
+          cursor: isReadonly ? "default" : "pointer",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -77,6 +80,7 @@ export default function NavCueRow({ item, ticked, onTick, index }: NavCueRowProp
           transition: "all 0.15s",
           minWidth: "18px",
           minHeight: "18px",
+          opacity: isReadonly ? 0.5 : 1,
         }}
       >
         {ticked && (

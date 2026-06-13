@@ -4,6 +4,7 @@ import { useState } from "react";
 import ProgressRing from "./ProgressRing";
 import ChapterDrawer from "./ChapterDrawer";
 import { regions, isChapterDone } from "@/lib/content";
+import { useSessionMode } from "@/lib/SessionContext";
 
 interface SiteNavProps {
   completedIds: Set<string>;
@@ -12,6 +13,7 @@ interface SiteNavProps {
 
 export default function SiteNav({ completedIds, currentSlug = "" }: SiteNavProps) {
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const mode = useSessionMode();
 
   const totalItems = regions.reduce(
     (acc, r) => acc + r.checklist.filter((i) => !i.isNavCue).length,
@@ -79,6 +81,42 @@ export default function SiteNav({ completedIds, currentSlug = "" }: SiteNavProps
             {completedChapters}/19 chapters
           </span>
         </div>
+
+        {/* Read-only badge — desktop text, mobile dot */}
+        {mode === "readonly" && (
+          <>
+            <span
+              className="readonly-badge"
+              style={{
+                alignItems: "center",
+                fontSize: "8px",
+                fontFamily: "Inter, sans-serif",
+                letterSpacing: "0.12em",
+                color: "#9B9488",
+                background: "rgba(155,148,136,0.12)",
+                border: "1px solid rgba(155,148,136,0.3)",
+                borderRadius: "4px",
+                padding: "3px 8px",
+                whiteSpace: "nowrap",
+                userSelect: "none",
+              }}
+            >
+              READ ONLY
+            </span>
+            <span
+              className="readonly-dot"
+              title="Read-only mode"
+              style={{
+                width: "8px",
+                height: "8px",
+                borderRadius: "50%",
+                background: "#9B9488",
+                opacity: 0.6,
+                flexShrink: 0,
+              }}
+            />
+          </>
+        )}
 
         {/* Right: ring + drawer trigger */}
         <div style={{ display: "flex", alignItems: "center", gap: "0.875rem", flexShrink: 0 }}>
