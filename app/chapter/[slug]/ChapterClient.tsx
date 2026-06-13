@@ -189,17 +189,6 @@ export default function ChapterClient({ region }: ChapterClientProps) {
         </div>
       </motion.main>
 
-      <style>{`
-        @media (min-width: 640px) {
-          .chapter-body {
-            grid-template-columns: 1fr 210px !important;
-          }
-        }
-        @media (max-width: 479px) {
-          .spoiler-label { display: none; }
-          .nav-label { display: none; }
-        }
-      `}</style>
     </div>
   );
 }

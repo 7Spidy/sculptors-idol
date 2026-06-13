@@ -1,17 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
-
-// These will be wired to Upstash in Phase 6.
-// For now, stub with a graceful fallback.
-
-let memoryStore: string[] = [];
+import { getProgress, toggleItem } from "@/lib/progress";
 
 export async function GET() {
   try {
-    const { getProgress } = await import("@/lib/progress");
     const ids = await getProgress();
     return NextResponse.json({ completedItemIds: ids });
-  } catch {
-    return NextResponse.json({ completedItemIds: memoryStore });
+  } catch (err) {
+    // Redis not configured — return empty array, don't 404
+    console.warn("Progress GET failed (Redis may not be configured):", err);
+    return NextResponse.json({ completedItemIds: [] });
   }
 }
 
@@ -21,25 +18,14 @@ export async function POST(req: NextRequest) {
     const { id, checked } = body as { id: string; checked: boolean };
 
     if (!id || typeof checked !== "boolean") {
-      return NextResponse.json({ error: "Invalid body" }, { status: 400 });
+      return NextResponse.json({ error: "Invalid body: requires { id: string, checked: boolean }" }, { status: 400 });
     }
 
-    try {
-      const { toggleItem } = await import("@/lib/progress");
-      await toggleItem(id, checked);
-      const { getProgress } = await import("@/lib/progress");
-      const ids = await getProgress();
-      return NextResponse.json({ completedItemIds: ids });
-    } catch {
-      // Fallback to in-memory when Redis not configured
-      if (checked) {
-        if (!memoryStore.includes(id)) memoryStore = [...memoryStore, id];
-      } else {
-        memoryStore = memoryStore.filter((x) => x !== id);
-      }
-      return NextResponse.json({ completedItemIds: memoryStore });
-    }
-  } catch {
-    return NextResponse.json({ error: "Invalid request" }, { status: 400 });
+    const updated = await toggleItem(id, checked);
+    return NextResponse.json({ completedItemIds: updated });
+  } catch (err) {
+    console.warn("Progress POST failed (Redis may not be configured):", err);
+    // Return current state (empty) rather than error
+    return NextResponse.json({ completedItemIds: [] });
   }
 }
