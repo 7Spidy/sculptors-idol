@@ -1,0 +1,698 @@
+{
+  "$comment": "Sculptor's Idol — complete content based on Torllay's Steam guide (id=3345726654). 19 chapters matching the exact guide order. 'isNavCue' items are amber warning banners (not regular checkboxes) that route Pam to another chapter before continuing. returnPath:true marks Return-ending required steps.",
+  "meta": {
+    "siteName": "Sculptor's Idol",
+    "tagline": "Rest. Remember. Resurrect.",
+    "subtitle": "Pam's guide through Ashina — the Return / Dragon's Homecoming ending.",
+    "endingFocus": "Return / Dragon's Homecoming"
+  },
+  "greetings": {
+    "morning":   { "range": "05:00-11:59", "text": "Good morning, Pam." },
+    "afternoon": { "range": "12:00-16:59", "text": "Good afternoon, Pam." },
+    "evening":   { "range": "17:00-20:59", "text": "Good evening, Pam." },
+    "night":     { "range": "21:00-04:59", "text": "A late-night shinobi run, Pam?" }
+  },
+  "motivationalLines": [
+    "Hesitation is defeat. Step forward, Pam.",
+    "Death is only the beginning — resurrect, and answer the blade.",
+    "The deflection you fear today becomes instinct tomorrow.",
+    "Posture over health. Pressure them until they break.",
+    "Ashina was not won in a day. Neither was any wolf.",
+    "Listen for the perilous moment, then meet it without fear.",
+    "You have fallen before. It did not stop you — it sharpened you.",
+    "Patience is a blade. Whet it with every attempt.",
+    "One more try. The shinobi who rises again cannot be beaten.",
+    "Every idol you reach is a promise that you'll go further.",
+    "Mist, moonlight, and Mibu are waiting. Walk on.",
+    "The bell tolls for those brave enough to remember.",
+    "Read the rhythm, not the fear. The fight is a song.",
+    "Mikiri the thrust, deflect the storm — Ashina bends to patience.",
+    "Today you lose to learn. Tomorrow you win because you did."
+  ],
+  "regions": [
+    {
+      "id": "ashina-reservoir-1",
+      "slug": "ashina-reservoir-1",
+      "name": "Ashina Reservoir",
+      "order": 1,
+      "spoilerRegion": false,
+      "blurb": "Where the story begins. A moonlit reservoir, a severed arm, and a choice that sets everything in motion. You cannot win these fights — but you will remember them.",
+      "checklist": [
+        { "id": "ar1-01", "text": "Face the scripted encounter with Leader Shigenori Yamauchi.", "spoiler": false, "isNavCue": false },
+        { "id": "ar1-02", "text": "Face the scripted encounter with Genichiro Ashina — this is a story moment, not a boss fight you're expected to win.", "spoiler": false, "isNavCue": false }
+      ],
+      "bosses": [
+        {
+          "id": "b-yamauchi-1", "name": "Leader Shigenori Yamauchi", "type": "miniboss", "spoiler": false,
+          "tip": "Scripted encounter at the start. A taste of what's coming — pure combat basics.",
+          "guideUrls": [
+            { "label": "Tyrannicon Guru Guide", "url": "https://www.youtube.com/watch?v=yBiWErimUqw" },
+            { "label": "Quick Strategy", "url": "https://www.youtube.com/watch?v=SQeJYVEF1IQ" }
+          ]
+        },
+        {
+          "id": "b-genichiro-prologue", "name": "Genichiro Ashina (Prologue — scripted loss)", "type": "boss", "spoiler": false,
+          "tip": "You are meant to lose this fight. Fight as long as you can to learn his moveset — you will meet him again.",
+          "guideUrls": [
+            { "label": "Tyrannicon Guru Guide", "url": "https://www.youtube.com/watch?v=KH3TBPHyDPw" },
+            { "label": "Polygon Walkthrough", "url": "https://www.youtube.com/watch?v=yNE3kVl7FjE" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dilapidated-temple",
+      "slug": "dilapidated-temple",
+      "name": "Dilapidated Temple",
+      "order": 2,
+      "spoilerRegion": false,
+      "blurb": "Your base of operations. The Sculptor carves Buddhas to keep the demon at bay. Rest here between battles — this is the last safe place in Ashina.",
+      "checklist": [
+        { "id": "dt-01", "text": "Talk to the Sculptor and receive the prosthetic arm.", "spoiler": false },
+        { "id": "dt-02", "text": "Talk to Emma, the physician tending to the Sculptor.", "spoiler": false },
+        { "id": "dt-03", "text": "Talk to Hanbei the Undying — he will help you practise combat without consequence.", "spoiler": false }
+      ],
+      "bosses": []
+    },
+    {
+      "id": "ashina-outskirts",
+      "slug": "ashina-outskirts",
+      "name": "Ashina Outskirts",
+      "order": 3,
+      "spoilerRegion": false,
+      "blurb": "A road of fire, broken soldiers, and the first real lessons in deflection. Every fight here teaches something. Gyoubu at the gate is the first true test.",
+      "checklist": [
+        { "id": "ao-01", "text": "Find the Loaded Shuriken prosthetic along the early path.", "spoiler": false },
+        { "id": "ao-02", "text": "Face Minor Boss: General Naomori Kawarada.", "spoiler": false },
+        { "id": "ao-03", "text": "Obtain the Young Lord's Bell Charm from the old woman near the battlefield — this unlocks Hirata Estate.", "spoiler": false },
+        { "id": "ao-04", "text": "Find Crow's Bed Memorial Mob merchant and browse his stock.", "spoiler": false },
+        { "id": "ao-05", "text": "Find your first Recollection (phantom conversation — listen carefully).", "spoiler": false },
+        { "id": "ao-06", "text": "Find Anayama the Peddler and talk to the nearby NPC to learn about the Hirata story.", "spoiler": false },
+        { "id": "ao-07", "text": "Face Minor Boss: Chained Ogre. (Grab the Flame Barrel first — fire staggers him.)", "spoiler": false },
+        { "id": "ao-08", "text": "Pick up the Nightjar Monocular and a Gourd Seed in the area after the Ogre.", "spoiler": false },
+        { "id": "ao-09", "text": "Face Minor Boss: General Tenzen Yamauchi.", "spoiler": false },
+        { "id": "ao-10", "text": "Optional: Find the Headless and the shortcut to the Demon Bell (you don't need to fight Headless yet).", "spoiler": false },
+        { "id": "ao-11", "text": "Harm the Great Serpent along the cliff path — experience this moment.", "spoiler": false },
+        { "id": "ao-12", "text": "Find the second Recollection in the area before Gyoubu.", "spoiler": false },
+        { "id": "ao-13", "text": "Face Boss: Gyoubu Masataka Oniwa.", "spoiler": false },
+        { "id": "ao-14", "text": "Find Battlefield Memorial Mob merchant past the gate.", "spoiler": false },
+        { "id": "ao-15", "text": "Buy the Gourd Seed from the Battlefield merchant.", "spoiler": false },
+        { "id": "ao-16", "text": "Find Tengu of Ashina, accept his quest to kill the rats, then return to him.", "spoiler": false },
+        { "id": "ao-17", "text": "Pick up the Prayer Bead upstairs near the shortcut and unlock the path.", "spoiler": false }
+      ],
+      "bosses": [
+        {
+          "id": "b-kawarada", "name": "General Naomori Kawarada", "type": "miniboss", "spoiler": false,
+          "tip": "Your first real deflection lesson. Block his combo string and punish the gap after.",
+          "guideUrls": [
+            { "label": "Tyrannicon Guru Guide", "url": "https://www.youtube.com/watch?v=yBiWErimUqw" },
+            { "label": "Quick Strategy", "url": "https://www.youtube.com/watch?v=SQeJYVEF1IQ" }
+          ]
+        },
+        {
+          "id": "b-ogre", "name": "Chained Ogre", "type": "miniboss", "spoiler": false,
+          "tip": "Weak to fire — open with the Flame Vent. Dodge his grabs sideways, never backwards.",
+          "guideUrls": [
+            { "label": "Tyrannicon Guru Guide", "url": "https://www.youtube.com/watch?v=yBiWErimUqw" },
+            { "label": "Easy Kill Strategy", "url": "https://www.youtube.com/watch?v=SQeJYVEF1IQ" }
+          ]
+        },
+        {
+          "id": "b-tenzen", "name": "General Tenzen Yamauchi", "type": "miniboss", "spoiler": false,
+          "tip": "Same general pattern as Kawarada. Deflect the combo, use Mikiri Counter on his thrusts.",
+          "guideUrls": [
+            { "label": "Tyrannicon Guru Guide", "url": "https://www.youtube.com/watch?v=yBiWErimUqw" },
+            { "label": "Quick Strategy", "url": "https://www.youtube.com/watch?v=SQeJYVEF1IQ" }
+          ]
+        },
+        {
+          "id": "b-gyoubu", "name": "Gyoubu Masataka Oniwa", "type": "boss", "spoiler": false,
+          "tip": "First real boss. Grapple toward him when he gallops away. Firecrackers stun the horse. Stay aggressive on posture.",
+          "guideUrls": [
+            { "label": "Tyrannicon Guru Guide", "url": "https://www.youtube.com/watch?v=yBiWErimUqw" },
+            { "label": "Polygon Walkthrough", "url": "https://www.youtube.com/watch?v=inKMnpLDA-I" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hirata-estate-1",
+      "slug": "hirata-estate-1",
+      "name": "Hirata Estate",
+      "order": 4,
+      "spoilerRegion": false,
+      "blurb": "A memory of fire. Use the Bell Charm at the Buddha statue to enter. Rich in prosthetics, masks, and one of the game's defining duels. Lady Butterfly is the wall that teaches aggression.",
+      "checklist": [
+        { "id": "he1-01", "text": "Kill the Treasure Carps in the estate waterway.", "spoiler": false },
+        { "id": "he1-02", "text": "Meet Pot Noble Harunaga at the riverbank.", "spoiler": false },
+        { "id": "he1-03", "text": "Buy Mask Fragment: Right for 7 Treasure Carp Scales from Pot Noble Harunaga.", "spoiler": false },
+        { "id": "he1-04", "text": "Find the Flame Vent with the group of bandits near the fire early in the estate.", "spoiler": false },
+        { "id": "he1-05", "text": "Obtain the Loaded Axe from the small temple right after the Flame Vent.", "spoiler": false },
+        { "id": "he1-06", "text": "Meet Anayama the Peddler from the past (the memory version).", "spoiler": false },
+        { "id": "he1-07", "text": "Face Minor Boss: Shinobi Hunter Enshin of Misen.", "spoiler": false },
+        { "id": "he1-08", "text": "Obtain the Mist Raven prosthetic from the pagoda in the river past the Shinobi Hunter.", "spoiler": false },
+        { "id": "he1-09", "text": "Meet The Owl and get the Hidden Temple Key from him.", "spoiler": true },
+        { "id": "he1-10", "text": "Face Minor Boss: Juzou the Drunkard. (Recruit the NPC ally first, then use oil + Flame Vent.)", "spoiler": false },
+        { "id": "he1-11", "text": "Get the Prayer Bead in the chest behind the hidden wall near the Hirata Audience Chamber idol. The wall is behind the scroll at the end of the patrolled path.", "spoiler": false },
+        { "id": "he1-12", "text": "Face Boss: Lady Butterfly.", "spoiler": false }
+      ],
+      "bosses": [
+        {
+          "id": "b-enshin", "name": "Shinobi Hunter Enshin of Misen", "type": "miniboss", "spoiler": false,
+          "tip": "He punishes panic. Deflect his thrust-heavy spear combos — Mikiri Counter trivialises him.",
+          "guideUrls": [
+            { "label": "Tyrannicon Guru Guide", "url": "https://www.youtube.com/watch?v=yBiWErimUqw" },
+            { "label": "Polygon Walkthrough", "url": "https://www.youtube.com/watch?v=inKMnpLDA-I" }
+          ]
+        },
+        {
+          "id": "b-juzou-1", "name": "Juzou the Drunkard", "type": "miniboss", "spoiler": false,
+          "tip": "Recruit the NPC ally before engaging. Oil + Flame Vent burns both health bars fast.",
+          "guideUrls": [
+            { "label": "Tyrannicon Guru Guide", "url": "https://www.youtube.com/watch?v=yBiWErimUqw" },
+            { "label": "Easy Method", "url": "https://www.youtube.com/watch?v=SQeJYVEF1IQ" }
+          ]
+        },
+        {
+          "id": "b-butterfly", "name": "Lady Butterfly", "type": "boss", "spoiler": false,
+          "tip": "The game's first wall for many. Stay close, deflect the three-hit strings, dodge illusions in phase two. Aggression beats her — don't back away.",
+          "guideUrls": [
+            { "label": "Tyrannicon Guru Guide", "url": "https://www.youtube.com/watch?v=HX1ZWlwylCs" },
+            { "label": "Cheese / Easy Method", "url": "https://www.youtube.com/watch?v=QDUJb8yuE0U" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ashina-castle-1",
+      "slug": "ashina-castle-1",
+      "name": "Ashina Castle",
+      "order": 5,
+      "spoilerRegion": false,
+      "blurb": "The heart of the realm. A brief but important first pass — grab the Gatehouse Key, deal with the Bull, and scout the routes before things get complicated.",
+      "checklist": [
+        { "id": "ac1-01", "text": "Face Minor Boss: Blazing Bull at the castle entrance.", "spoiler": false },
+        { "id": "ac1-02", "text": "Get the Gatehouse Key from the room near the castle gate.", "spoiler": false },
+        { "id": "ac1-03", "text": "Find the Dungeon Memorial Mob merchant in the rooms past the bridge on the right of the castle entrance, toward the starting reservoir basin.", "spoiler": false }
+      ],
+      "bosses": [
+        {
+          "id": "b-bull", "name": "Blazing Bull", "type": "miniboss", "spoiler": false,
+          "tip": "Stay directly behind it at all times — hug the hips. Firecrackers stagger it. Never stand in front.",
+          "guideUrls": [
+            { "label": "Tyrannicon Guru Guide", "url": "https://www.youtube.com/watch?v=yBiWErimUqw" },
+            { "label": "Quick Strategy", "url": "https://www.youtube.com/watch?v=SQeJYVEF1IQ" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ashina-reservoir-2",
+      "slug": "ashina-reservoir-2",
+      "name": "Ashina Reservoir — Part 2",
+      "order": 6,
+      "spoilerRegion": false,
+      "blurb": "Back at the beginning — but now there are new threats in the water and old paths to explore. The reservoir connects the castle to the dungeon below.",
+      "checklist": [
+        { "id": "ar2-01", "text": "Enter the house near the start of the game and obtain Gyoubu's Broken Horn.", "spoiler": false },
+        { "id": "ar2-02", "text": "Face Minor Boss: Seven Ashina Spears (Shikibu Toshikatsu Yamauchi) in the reservoir area.", "spoiler": false },
+        { "id": "ar2-03", "text": "Find the Remnant at the spot where Kuro was held at the start of the game.", "spoiler": false },
+        { "id": "ar2-04", "text": "Meet Jinzaemon Kumano near the hole where Sekiro emerged at the beginning.", "spoiler": false },
+        { "id": "ar2-05", "text": "Face Minor Boss: Lone Shadow Longswordsman at the spot where the game started.", "spoiler": false },
+        { "id": "ar2-06", "text": "Unlock the Sculptor's Idol at the Abandoned Dungeon entrance — past the waters from the start of the game.", "spoiler": false }
+      ],
+      "bosses": [
+        {
+          "id": "b-seven-spears-1", "name": "Seven Ashina Spears — Shikibu Toshikatsu Yamauchi", "type": "miniboss", "spoiler": false,
+          "tip": "Spear-heavy. Jump over his sweeps, Mikiri the thrusts. Clear the area guards first.",
+          "guideUrls": [
+            { "label": "Tyrannicon Guru Guide", "url": "https://www.youtube.com/watch?v=yBiWErimUqw" },
+            { "label": "Quick Strategy", "url": "https://www.youtube.com/watch?v=SQeJYVEF1IQ" }
+          ]
+        },
+        {
+          "id": "b-lone-shadow-1", "name": "Lone Shadow Longswordsman", "type": "miniboss", "spoiler": false,
+          "tip": "Watch for the unblockable sweep (jump over it) and thrust (Mikiri). Sabimaru poison helps significantly.",
+          "guideUrls": [
+            { "label": "Tyrannicon Guru Guide", "url": "https://www.youtube.com/watch?v=yBiWErimUqw" },
+            { "label": "Quick Strategy", "url": "https://www.youtube.com/watch?v=SQeJYVEF1IQ" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ashina-castle-2",
+      "slug": "ashina-castle-2",
+      "name": "Ashina Castle — Part 2",
+      "order": 7,
+      "spoilerRegion": false,
+      "blurb": "Climbing the castle toward Kuro and Genichiro. Do items 1–7, then stop. You are not ready for Genichiro yet — two areas must be explored first.",
+      "checklist": [
+        { "id": "ac2-01", "text": "Face Minor Boss: General Kuranosuke Matsumoto at the top of the castle stairs.", "spoiler": false },
+        { "id": "ac2-02", "text": "Rescue Fujioka the Info Broker (trapped near the samurai); speak to him for the Nightjar Beacon Memo. He moves to the Dilapidated Temple and sells a Gourd Seed for 2000 sen.", "spoiler": false },
+        { "id": "ac2-03", "text": "Open the treasure chest and collect the Gourd Seed.", "spoiler": false },
+        { "id": "ac2-04", "text": "Obtain the Sabimaru prosthetic — all the way down the pagoda.", "spoiler": false },
+        { "id": "ac2-05", "text": "Find the hidden passage and acquire the Prayer Bead inside the treasure chest.", "spoiler": false },
+        { "id": "ac2-06", "text": "Interact with the Emma and Kuro remnant.", "spoiler": true },
+        { "id": "ac2-07", "text": "Face Minor Boss: Ashina Elite — Jinsuke Saze.", "spoiler": false },
+        { "id": "ac2-nav", "text": "⚠️ DETOUR BEFORE CONTINUING — Do NOT fight Genichiro yet. Head to the Abandoned Dungeon (Chapter 8), then Senpou Temple (Chapter 9, items 1–8). Return here when done.", "spoiler": false, "isNavCue": true },
+        { "id": "ac2-08", "text": "Face Boss: Genichiro Ashina — the real fight atop the castle. (Return here after Abandoned Dungeon + Senpou Temple items 1–8.)", "spoiler": true },
+        { "id": "ac2-09", "text": "Acquire the Bloodsmoke Ninjutsu technique.", "spoiler": true },
+        { "id": "ac2-10", "text": "Talk to Kuro — he tells you to go outside his window to find Isshin Ashina.", "spoiler": true },
+        { "id": "ac2-11", "text": "Talk to Kuro again and loot the Gun Fort Shrine Key from him.", "spoiler": true },
+        { "id": "ac2-12", "text": "Find the Old Grave Sculptor's Idol below Isshin's quarters. Meet Blackhat Badger and purchase the Loaded Umbrella material for 1600 sen.", "spoiler": true },
+        { "id": "ac2-13", "text": "Anayama's Quest: Eavesdrop on two guards near the bridge by Old Grave (they want salt). Give Anayama the info, then rest — his stock increases.", "spoiler": true }
+      ],
+      "bosses": [
+        {
+          "id": "b-matsumoto", "name": "General Kuranosuke Matsumoto", "type": "miniboss", "spoiler": false,
+          "tip": "Standard general — deflect his combo, Mikiri his thrust. Clear his guards first.",
+          "guideUrls": [
+            { "label": "Tyrannicon Guru Guide", "url": "https://www.youtube.com/watch?v=yBiWErimUqw" },
+            { "label": "Quick Strategy", "url": "https://www.youtube.com/watch?v=SQeJYVEF1IQ" }
+          ]
+        },
+        {
+          "id": "b-ashina-elite-1", "name": "Ashina Elite — Jinsuke Saze", "type": "miniboss", "spoiler": false,
+          "tip": "A drawn-sword duelist. The deadly strike comes from the sheathed stance. Deflect the opener instantly and punish — stay glued to him.",
+          "guideUrls": [
+            { "label": "Tyrannicon Guru Guide", "url": "https://www.youtube.com/watch?v=yBiWErimUqw" },
+            { "label": "Quick Strategy", "url": "https://www.youtube.com/watch?v=SQeJYVEF1IQ" }
+          ]
+        },
+        {
+          "id": "b-genichiro-main", "name": "Genichiro Ashina", "type": "boss", "spoiler": true,
+          "tip": "The game's real skill check. Unlock Mikiri Counter first. Deflect his arrows, reverse his lightning in phase 3. This fight teaches you everything.",
+          "guideUrls": [
+            { "label": "Tyrannicon Guru Guide", "url": "https://www.youtube.com/watch?v=KH3TBPHyDPw" },
+            { "label": "Polygon Walkthrough", "url": "https://www.youtube.com/watch?v=yNE3kVl7FjE" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "abandoned-dungeon",
+      "slug": "abandoned-dungeon",
+      "name": "Abandoned Dungeon",
+      "order": 8,
+      "spoilerRegion": false,
+      "blurb": "A grim underground prison beneath the castle. Short but dense with items, merchants, and a NPC quest that shapes a character's fate. Do this before Senpou Temple.",
+      "checklist": [
+        { "id": "ad-01", "text": "Buy Mask Fragment: Dragon from the Dungeon Memorial Mob at the entrance for 5000 sen.", "spoiler": false },
+        { "id": "ad-02", "text": "Buy a Prayer Bead from the same merchant.", "spoiler": false },
+        { "id": "ad-03", "text": "Obtain the Rotting Prisoner's Note.", "spoiler": false },
+        { "id": "ad-04", "text": "Speak to Doujon and receive the Surgeon's Bloody Letter.", "spoiler": false },
+        { "id": "ad-05", "text": "Face Minor Boss: Shichimen Warrior (optional) and acquire the Ceremonial Tanto.", "spoiler": true },
+        { "id": "ad-06", "text": "NPC Quest — Jinzaemon Kumano: Send him to Doujon (his quest ends in his death regardless); save Kotaro instead. Sending either to Doujon rewards 3x Lump of Fat Wax on return.", "spoiler": true }
+      ],
+      "bosses": [
+        {
+          "id": "b-shichimen-1", "name": "Shichimen Warrior", "type": "miniboss", "spoiler": true,
+          "tip": "Stock Divine Confetti and Pacifying Agent. Close distance fast — deflect the orbs, never let it heal.",
+          "guideUrls": [
+            { "label": "Tyrannicon Guru Guide", "url": "https://www.youtube.com/watch?v=yBiWErimUqw" },
+            { "label": "Quick Strategy", "url": "https://www.youtube.com/watch?v=SQeJYVEF1IQ" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "senpou-temple",
+      "slug": "senpou-temple",
+      "name": "Senpou Temple, Mt. Kongo",
+      "order": 9,
+      "spoilerRegion": false,
+      "blurb": "A misty mountaintop of corrupt monks — and where the Return path truly begins. Do items 1–8 now. Fight Genichiro first (Chapter 7), then return for items 9 onward.",
+      "checklist": [
+        { "id": "st-01", "text": "Speak to Kotaro (the large, friendly monk).", "spoiler": false },
+        { "id": "st-02", "text": "Loot the Gourd Seed from the room with the monks and crickets.", "spoiler": false },
+        { "id": "st-03", "text": "Speak to the Old Hag — she'll ask for rice (you'll get this later).", "spoiler": false },
+        { "id": "st-04", "text": "Loot the Red and White Pinwheel; also loot the White Pinwheel near the Demon Bell area.", "spoiler": false },
+        { "id": "st-05", "text": "Give the White Pinwheel to Kotaro — this is the better ending for his story.", "spoiler": false },
+        { "id": "st-06", "text": "Face Minor Boss: Armored Warrior — ROBERTOOOO.", "spoiler": false },
+        { "id": "st-07", "text": "Face Minor Boss: Long-arm Centipede Sen-Un — further up the mountain inside the lower temple on the right.", "spoiler": false },
+        { "id": "st-08", "text": "Loot the Senpou Esoteric Text by going through the cave and out the other side near the mountaintop temple.", "spoiler": false },
+        { "id": "st-nav", "text": "⚠️ PAUSE — Stop here before the bell. Return to Ashina Castle Part 2 (Chapter 7, item 8) and fight Genichiro. Come back after!", "spoiler": false, "isNavCue": true },
+        { "id": "st-09", "text": "Ring the bell in the large temple to unlock the Folding Screen Monkeys arena. (Only after Genichiro is defeated.)", "spoiler": true },
+        { "id": "st-10", "text": "Face Boss: Folding Screen Monkeys.", "spoiler": true },
+        { "id": "st-11", "text": "Acquire the Puppeteer Ninjutsu from the Monkeys arena; get the Mortal Blade from the Divine Child of Rejuvenation in the Inner Sanctum.", "spoiler": true },
+        { "id": "st-12", "text": "RETURN PATH — Obtain the Holy Chapter: Infested and bring it to the Divine Child.", "spoiler": true, "returnPath": true },
+        { "id": "st-13", "text": "RETURN PATH — Keep eating the rice from the Divine Child; keep asking for more until she falls asleep.", "spoiler": true, "returnPath": true },
+        { "id": "st-14", "text": "RETURN PATH — When she gives you Rice for Kuro, bring it to Kuro. After he eats it, talk about it with both Kuro and the Divine Child.", "spoiler": true, "returnPath": true },
+        { "id": "st-15", "text": "RETURN PATH — Reload the area, return to the Folding Monkeys arena, and exhaust the Divine Child's dialogue there.", "spoiler": true, "returnPath": true },
+        { "id": "st-16", "text": "RETURN PATH — Go to the cave on the left of the Main Temple shrine. Find the blue monk holding the Holy Chapter: Dragon's Return. Bring it to the Divine Child in her room.", "spoiler": true, "returnPath": true },
+        { "id": "st-17", "text": "RETURN PATH — Go forward and obtain both Serpent Viscera fruits (Fresh and Dried) from the two great serpent encounters.", "spoiler": true, "returnPath": true },
+        { "id": "st-18", "text": "RETURN PATH — Use Puppeteer Ninjutsu on the rat near the kite above Senpou Temple to raise it, then cross the valley to the Sunken Valley Cavern idol.", "spoiler": true, "returnPath": true }
+      ],
+      "bosses": [
+        {
+          "id": "b-armored-warrior", "name": "Armored Warrior", "type": "miniboss", "spoiler": false,
+          "tip": "Your sword does nothing to his armor. Deflect to fill his posture bar, then knock him off the bridge with the death blow.",
+          "guideUrls": [
+            { "label": "Tyrannicon Guru — 60s Kill", "url": "https://www.youtube.com/watch?v=maLlmao_9h4" },
+            { "label": "Quick Strategy", "url": "https://www.youtube.com/watch?v=SQeJYVEF1IQ" }
+          ]
+        },
+        {
+          "id": "b-centipede-senun", "name": "Long-arm Centipede Sen-Un", "type": "miniboss", "spoiler": false,
+          "tip": "Pure deflection rhythm. Keep blocking the entire flurry — the posture bar fills fast. Don't flinch.",
+          "guideUrls": [
+            { "label": "Tyrannicon Guru Guide", "url": "https://www.youtube.com/watch?v=yBiWErimUqw" },
+            { "label": "Quick Strategy", "url": "https://www.youtube.com/watch?v=SQeJYVEF1IQ" }
+          ]
+        },
+        {
+          "id": "b-folding-monkeys", "name": "Folding Screen Monkeys", "type": "boss", "spoiler": true,
+          "tip": "A stealth puzzle, not a duel. Hunt each monkey using sight, sound, footprints, and darkness. Corner the invisible one last.",
+          "guideUrls": [
+            { "label": "Tyrannicon Guru — 60s Kill", "url": "https://www.youtube.com/watch?v=maLlmao_9h4" },
+            { "label": "Polygon Walkthrough", "url": "https://www.youtube.com/watch?v=EOJcxd-q9jA" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ashina-castle-3",
+      "slug": "ashina-castle-3",
+      "name": "Ashina Castle — Part 3",
+      "order": 10,
+      "spoilerRegion": true,
+      "blurb": "Mortal Blade in hand. The castle now connects to Sunken Valley — and Isshin himself has things to say. A pivotal chapter before the wider world opens.",
+      "checklist": [
+        { "id": "ac3-01", "text": "After gaining the Mortal Blade, teleport to the top of Ashina Castle. Drop from the roof into the moat, grapple out, cross the bridge, and use the Gun Fort Shrine Key to open the shrine. Speak to the Tengu of Ashina.", "spoiler": true },
+        { "id": "ac3-02", "text": "Go to the Great Serpent Shrine and cross into Sunken Valley.", "spoiler": true },
+        { "id": "ac3-03", "text": "From this point onward: regularly drop by Isshin's room in Ashina Castle and eavesdrop on him — you are looking for specific conversations that evolve as you progress.", "spoiler": true },
+        { "id": "ac3-04", "text": "Talk to Emma about what you overheard. Continue this loop as the story advances.", "spoiler": true }
+      ],
+      "bosses": []
+    },
+    {
+      "id": "sunken-valley",
+      "slug": "sunken-valley",
+      "name": "Sunken Valley",
+      "order": 11,
+      "spoilerRegion": true,
+      "blurb": "Sheer snowy cliffs, sniper-heavy gauntlets, and the terrifying first encounter with a great serpent that guards the Gun Fort. Move carefully — the snipers here are brutal.",
+      "checklist": [
+        { "id": "sv-01", "text": "Light the Sunken Valley Sculptor's Idols; pick your way across the cliff ledges past the riflemen.", "spoiler": true },
+        { "id": "sv-02", "text": "Survive the first Great Serpent encounter on the bridge approach to the Gun Fort.", "spoiler": true },
+        { "id": "sv-03", "text": "Face Minor Boss: Snake Eyes Shirafuji at the Gun Fort.", "spoiler": true },
+        { "id": "sv-04", "text": "Explore the Gun Fort — collect Prayer Beads, loot the area, and find the path forward.", "spoiler": true },
+        { "id": "sv-05", "text": "Reach the Under-Shrine Valley Idol and prepare to descend into Sunken Valley Passage.", "spoiler": true }
+      ],
+      "bosses": [
+        {
+          "id": "b-shirafuji", "name": "Snake Eyes Shirafuji", "type": "miniboss", "spoiler": true,
+          "tip": "Stay close — she can't shoot at point-blank range. Jump-dodge the kick-grab perilous attack.",
+          "guideUrls": [
+            { "label": "Tyrannicon Guru Guide", "url": "https://www.youtube.com/watch?v=NHKUPbUxOJU" },
+            { "label": "Polygon Walkthrough", "url": "https://www.youtube.com/watch?v=LrdqH2bVLFY" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sunken-valley-passage",
+      "slug": "sunken-valley-passage",
+      "name": "Sunken Valley Passage",
+      "order": 12,
+      "spoilerRegion": true,
+      "blurb": "The valley below — poison swamps, toxic enemies, and a boss that defies expectation in more ways than one. One of the game's most memorable fights.",
+      "checklist": [
+        { "id": "svp-01", "text": "Descend into Bodhisattva Valley and navigate the poison pool area.", "spoiler": true },
+        { "id": "svp-02", "text": "Face Minor Boss: Snake Eyes Shirahagi in the cave/passage area near the poison pools.", "spoiler": true },
+        { "id": "svp-03", "text": "Reach the Guardian Ape's arena — Bodhisattva Valley.", "spoiler": true },
+        { "id": "svp-04", "text": "Face Boss: Guardian Ape and collect the story item he drops.", "spoiler": true },
+        { "id": "svp-05", "text": "RETURN PATH — Fresh Serpent Viscera: after using the kite from Senpou Temple, drop down onto the Great Serpent coiled in the Sunken Valley Cavern and perform the finishing plunge deathblow.", "spoiler": true, "returnPath": true },
+        { "id": "svp-06", "text": "RETURN PATH — Dried Serpent Viscera: from Bodhisattva Valley, descend to the toxic river, pass the Toxic Memorial Mob, use Puppeteer Ninjutsu on the cowering monkey inside the cave to lure the second serpent.", "spoiler": true, "returnPath": true }
+      ],
+      "bosses": [
+        {
+          "id": "b-shirahagi", "name": "Snake Eyes Shirahagi", "type": "miniboss", "spoiler": true,
+          "tip": "Same loadout as Shirafuji but in a poison pool. Fight on dry ground where possible. Sabimaru helps.",
+          "guideUrls": [
+            { "label": "Tyrannicon Guru Guide", "url": "https://www.youtube.com/watch?v=NHKUPbUxOJU" },
+            { "label": "Polygon Walkthrough", "url": "https://www.youtube.com/watch?v=LrdqH2bVLFY" }
+          ]
+        },
+        {
+          "id": "b-guardian-ape", "name": "Guardian Ape", "type": "boss", "spoiler": true,
+          "tip": "Two brutal acts. Phase one: dodge the tantrums and watch for fart clouds. Phase two: it rises with a sword — Divine Confetti and constant aggression close it.",
+          "guideUrls": [
+            { "label": "Tyrannicon Guru Guide", "url": "https://www.youtube.com/watch?v=NHKUPbUxOJU" },
+            { "label": "Polygon Walkthrough", "url": "https://www.youtube.com/watch?v=LrdqH2bVLFY" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ashina-depths",
+      "slug": "ashina-depths",
+      "name": "Ashina Depths / Hidden Forest",
+      "order": 13,
+      "spoilerRegion": true,
+      "blurb": "One of Sekiro's most atmospheric areas. The Hidden Forest is a fog-drenched illusion maze — find what's causing it. Then deeper into the dark.",
+      "checklist": [
+        { "id": "depth-01", "text": "Enter the Hidden Forest and navigate the illusory mist without panicking.", "spoiler": true },
+        { "id": "depth-02", "text": "Face Minor Boss: Tokujiro the Glutton in the forest.", "spoiler": true },
+        { "id": "depth-03", "text": "Find and kill the monk generating the fog illusions to clear the forest.", "spoiler": true },
+        { "id": "depth-04", "text": "Light the Ashina Depths idols and collect Prayer Beads along the route.", "spoiler": true },
+        { "id": "depth-05", "text": "Face Minor Boss: O'Rin of the Water near the water's edge.", "spoiler": true }
+      ],
+      "bosses": [
+        {
+          "id": "b-tokujiro", "name": "Tokujiro the Glutton", "type": "miniboss", "spoiler": true,
+          "tip": "A poison-spitting brute. Stay on his flank, jump the perilous sweep. Sabimaru adds poison on top of his own.",
+          "guideUrls": [
+            { "label": "Tyrannicon Guru Guide", "url": "https://www.youtube.com/watch?v=yBiWErimUqw" },
+            { "label": "Polygon Walkthrough", "url": "https://www.youtube.com/watch?v=inKMnpLDA-I" }
+          ]
+        },
+        {
+          "id": "b-orin", "name": "O'Rin of the Water", "type": "miniboss", "spoiler": true,
+          "tip": "Fast and graceful — the standout miniboss. Deflect the dual-blade flurry patiently; Mikiri Counter answers her thrusts.",
+          "guideUrls": [
+            { "label": "Tyrannicon Guru Guide", "url": "https://www.youtube.com/watch?v=yBiWErimUqw" },
+            { "label": "Polygon Walkthrough", "url": "https://www.youtube.com/watch?v=inKMnpLDA-I" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mibu-village",
+      "slug": "mibu-village",
+      "name": "Mibu Village",
+      "order": 14,
+      "spoilerRegion": true,
+      "blurb": "A flooded village of possessed inhabitants under moonlight. Eerie and beautiful. The second story ingredient is here — guarded by the first Corrupted Monk.",
+      "checklist": [
+        { "id": "mv-01", "text": "Navigate Mibu Village — collect the Prayer Beads, Gourd Seed, and Mibu Balloon vendor stock.", "spoiler": true },
+        { "id": "mv-02", "text": "Find and interact with Jinzaemon Kumano at the village waterfall (if alive from the dungeon quest).", "spoiler": true },
+        { "id": "mv-03", "text": "Solve the Wedding Cave Door — find the key and unlock the path to the shrine.", "spoiler": true },
+        { "id": "mv-04", "text": "Obtain the second story ingredient from the shrine area.", "spoiler": true },
+        { "id": "mv-05", "text": "Face Boss: Corrupted Monk (Illusion) — guarding the shrine.", "spoiler": true }
+      ],
+      "bosses": [
+        {
+          "id": "b-corrupted-monk-1", "name": "Corrupted Monk (Illusion)", "type": "boss", "spoiler": true,
+          "tip": "Huge reach with the naginata. Snap Seeds dispel her illusion phase; deflect the wide arcs and watch for her unblockable grab.",
+          "guideUrls": [
+            { "label": "Easy Cheese Method (2025)", "url": "https://www.youtube.com/watch?v=lvN63b9EOuc" },
+            { "label": "Polygon Walkthrough", "url": "https://www.youtube.com/watch?v=inKMnpLDA-I" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ashina-castle-4",
+      "slug": "ashina-castle-4",
+      "name": "Ashina Castle — Part 4",
+      "order": 15,
+      "spoilerRegion": true,
+      "blurb": "The castle is under assault. New enemies everywhere. And a rooftop choice that determines the rest of your journey — choose Kuro. NEVER choose Owl.",
+      "checklist": [
+        { "id": "ac4-01", "text": "Return to the castle — find it under invasion. Fight through the new enemies.", "spoiler": true },
+        { "id": "ac4-02", "text": "Face Minor Boss: Lone Shadow Vilehand in the castle grounds.", "spoiler": true },
+        { "id": "ac4-03", "text": "Face Minor Boss: Seven Ashina Spears — Shume Masaji Oniwa on the rooftop approach.", "spoiler": true },
+        { "id": "ac4-04", "text": "⚠️ CRITICAL CHOICE — On the rooftop, Owl gives you an order. Choose 'Break the Iron Code — Stay loyal to Kuro.' DO NOT choose to side with Owl — doing so locks the Shura ending permanently.", "spoiler": true, "isNavCue": true },
+        { "id": "ac4-05", "text": "Face Boss: Great Shinobi — Owl on the rooftop.", "spoiler": true },
+        { "id": "ac4-06", "text": "After the Owl fight, talk to Emma. Talk to Isshin (old man) in his room.", "spoiler": true },
+        { "id": "ac4-07", "text": "RETURN PATH — Talk to Emma about the Divine Heir; exhaust the conversation tree. Talk to the Sculptor next.", "spoiler": true, "returnPath": true }
+      ],
+      "bosses": [
+        {
+          "id": "b-lone-shadow-vilehand", "name": "Lone Shadow Vilehand", "type": "miniboss", "spoiler": true,
+          "tip": "Jump-dodge the unblockable kick, Mikiri the thrust. Sabimaru poison staggers his rhythm.",
+          "guideUrls": [
+            { "label": "Tyrannicon Guru Guide", "url": "https://www.youtube.com/watch?v=yBiWErimUqw" },
+            { "label": "Quick Strategy", "url": "https://www.youtube.com/watch?v=SQeJYVEF1IQ" }
+          ]
+        },
+        {
+          "id": "b-seven-spears-2", "name": "Seven Ashina Spears — Shume Masaji Oniwa", "type": "miniboss", "spoiler": true,
+          "tip": "Jump the sweeps, Mikiri the thrusts. A faster, more aggressive spearman than the one in the reservoir.",
+          "guideUrls": [
+            { "label": "Tyrannicon Guru Guide", "url": "https://www.youtube.com/watch?v=yBiWErimUqw" },
+            { "label": "Quick Strategy", "url": "https://www.youtube.com/watch?v=SQeJYVEF1IQ" }
+          ]
+        },
+        {
+          "id": "b-owl-main", "name": "Great Shinobi — Owl", "type": "boss", "spoiler": true,
+          "tip": "He fights exactly like you — firecrackers, shuriken, smoke bombs. Punish his projectile animations, deflect the combos, never get greedy.",
+          "guideUrls": [
+            { "label": "Tyrannicon — No-Damage Guide", "url": "https://www.youtube.com/watch?v=Rh6Ha5BYh0s" },
+            { "label": "Polygon Walkthrough", "url": "https://www.youtube.com/watch?v=inKMnpLDA-I" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hirata-estate-2",
+      "slug": "hirata-estate-2",
+      "name": "Hirata Estate — Part 2",
+      "order": 16,
+      "spoilerRegion": true,
+      "blurb": "A second, darker memory of the estate. The past holds one more secret — and one more formidable shadow of the Owl. Optional for the Return path, but gives Prayer Beads.",
+      "checklist": [
+        { "id": "he2-01", "text": "Ring the bell again to enter the second Hirata memory (must have the bell from a specific source).", "spoiler": true },
+        { "id": "he2-02", "text": "Navigate the darker version of the estate — new enemies, new paths.", "spoiler": true },
+        { "id": "he2-03", "text": "Face Minor Boss: Lone Shadow Masanaga the Spear-Bearer.", "spoiler": true },
+        { "id": "he2-04", "text": "Face Boss: Owl (Father) — the memory version of your master.", "spoiler": true },
+        { "id": "he2-05", "text": "Note: This chapter is optional for the Return ending — you do NOT need the Sakura Droplet. But the Prayer Beads from bosses here are valuable for max health.", "spoiler": true }
+      ],
+      "bosses": [
+        {
+          "id": "b-masanaga", "name": "Lone Shadow Masanaga the Spear-Bearer", "type": "miniboss", "spoiler": true,
+          "tip": "Spear + shadow — Mikiri the thrusts, jump the sweeps. Sabimaru works well here.",
+          "guideUrls": [
+            { "label": "Tyrannicon Guru Guide", "url": "https://www.youtube.com/watch?v=yBiWErimUqw" },
+            { "label": "Quick Strategy", "url": "https://www.youtube.com/watch?v=SQeJYVEF1IQ" }
+          ]
+        },
+        {
+          "id": "b-owl-father", "name": "Owl (Father)", "type": "boss", "spoiler": true,
+          "tip": "Harder than the rooftop Owl — same toolkit but faster and more deceptive. Punish his smoke bomb recovery frames aggressively.",
+          "guideUrls": [
+            { "label": "Tyrannicon — No-Damage Guide", "url": "https://www.youtube.com/watch?v=Rh6Ha5BYh0s" },
+            { "label": "Polygon Walkthrough", "url": "https://www.youtube.com/watch?v=inKMnpLDA-I" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fountainhead-palace",
+      "slug": "fountainhead-palace",
+      "name": "Fountainhead Palace",
+      "order": 17,
+      "spoilerRegion": true,
+      "blurb": "The most beautiful place in Ashina — an ethereal heavenly realm above the clouds. The Return path has one unmissable step here: get the Frozen Tears BEFORE finishing the palace.",
+      "checklist": [
+        { "id": "fp-01", "text": "Enter Fountainhead Palace and light its Sculptor's Idols.", "spoiler": true },
+        { "id": "fp-02", "text": "Collect Prayer Beads and the Gourd Seed throughout the palace.", "spoiler": true },
+        { "id": "fp-03", "text": "Explore the upper palace and the great carp pond for Treasure Carp Scales.", "spoiler": true },
+        { "id": "fp-04", "text": "Face Minor Boss: Sakura Bull of the Palace.", "spoiler": true },
+        { "id": "fp-05", "text": "Face Minor Boss: Okami Leader Shizu (lightning spear warrior).", "spoiler": true },
+        { "id": "fp-06", "text": "RETURN PATH — CRITICAL: After receiving the Fountainhead Incense from Kuro, return to the Divine Child at Senpou Temple and speak with her to receive the Frozen Tears. Do this BEFORE defeating the True Corrupted Monk.", "spoiler": true, "returnPath": true },
+        { "id": "fp-07", "text": "Confirm the Frozen Tears are in your inventory. Then proceed to the palace final bosses.", "spoiler": true },
+        { "id": "fp-08", "text": "Face Boss: True Corrupted Monk — the full three-phase version.", "spoiler": true },
+        { "id": "fp-09", "text": "Face Boss: Divine Dragon.", "spoiler": true }
+      ],
+      "bosses": [
+        {
+          "id": "b-sakura-bull", "name": "Sakura Bull of the Palace", "type": "miniboss", "spoiler": true,
+          "tip": "Identical to the Blazing Bull — stay behind it, hug the hips, firecrackers stagger it.",
+          "guideUrls": [
+            { "label": "Tyrannicon Guru Guide", "url": "https://www.youtube.com/watch?v=yBiWErimUqw" },
+            { "label": "Quick Strategy", "url": "https://www.youtube.com/watch?v=SQeJYVEF1IQ" }
+          ]
+        },
+        {
+          "id": "b-okami-shizu", "name": "Okami Leader Shizu", "type": "miniboss", "spoiler": true,
+          "tip": "Lightning-charged spear. Reverse her lightning mid-air (same as Genichiro's), deflect the long thrusts.",
+          "guideUrls": [
+            { "label": "Tyrannicon Guru Guide", "url": "https://www.youtube.com/watch?v=yBiWErimUqw" },
+            { "label": "Quick Strategy", "url": "https://www.youtube.com/watch?v=SQeJYVEF1IQ" }
+          ]
+        },
+        {
+          "id": "b-true-corrupted-monk", "name": "True Corrupted Monk", "type": "boss", "spoiler": true,
+          "tip": "Full three-phase version. Snap Seeds dispel the illusion phase; deflect her wide naginata arcs; patience wins the centipede phase.",
+          "guideUrls": [
+            { "label": "Tyrannicon — 60-Second Kill", "url": "https://www.youtube.com/watch?v=KsRBcea1KC4" },
+            { "label": "Easy Method", "url": "https://www.youtube.com/watch?v=JDIewR1_vJM" }
+          ]
+        },
+        {
+          "id": "b-divine-dragon", "name": "Divine Dragon", "type": "boss", "spoiler": true,
+          "tip": "A spectacle fight — grab lightning from the floating saplings using grapple, then redirect it into the dragon. More cinematic than hard.",
+          "guideUrls": [
+            { "label": "Lightning Strategy Guide", "url": "https://www.youtube.com/watch?v=1oRWxOiEFe4" },
+            { "label": "Easy Step-by-Step", "url": "https://www.youtube.com/watch?v=mKwc_-oVhkY" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "endgame",
+      "slug": "endgame",
+      "name": "Ashina Reservoir — Part 5 & Ashina Outskirts — Part 2",
+      "order": 18,
+      "spoilerRegion": true,
+      "blurb": "Ashina is burning. Both the reservoir and outskirts are transformed by war and fire. New and returning enemies spawn everywhere. An optional masterpiece of a boss waits in the flames.",
+      "checklist": [
+        { "id": "eg-01", "text": "Return to the burning Ashina — explore the reservoir and outskirts in their final state.", "spoiler": true },
+        { "id": "eg-02", "text": "Face new/respawned minibosses in the changed areas — collect their Prayer Beads.", "spoiler": true },
+        { "id": "eg-03", "text": "OPTIONAL BUT RECOMMENDED — Face Boss: Demon of Hatred in the burning outskirts. One of the game's greatest fights.", "spoiler": true },
+        { "id": "eg-04", "text": "Ensure all Prayer Beads are collected (there are 40 total = 10 health upgrades), all Gourd Seeds found, and your Attack Power is maxed from Memory items.", "spoiler": true },
+        { "id": "eg-05", "text": "Make your final ascent to the clifftop arena for the last battle.", "spoiler": true }
+      ],
+      "bosses": [
+        {
+          "id": "b-demon-of-hatred", "name": "Demon of Hatred", "type": "boss", "spoiler": true,
+          "tip": "Plays like a Dark Souls boss — circle it, use the Suppress prosthetic + Mortal Draw, treat it as a dodge fight, NOT a deflect fight. Extraordinary but optional.",
+          "guideUrls": [
+            { "label": "4K Boss Guide — Full Fight", "url": "https://www.youtube.com/watch?v=1O8iQJofC3A" },
+            { "label": "Strategy & Tips", "url": "https://www.youtube.com/watch?v=SQeJYVEF1IQ" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "endings",
+      "slug": "endings",
+      "name": "ENDINGS — The Return",
+      "order": 19,
+      "spoilerRegion": true,
+      "blurb": "The final exam. Four phases, everything the game has taught you. And at the end — a choice. Give Kuro the Frozen Tears. Not the Dragon's Tears. The Frozen Tears.",
+      "checklist": [
+        { "id": "end-01", "text": "Face Boss: Isshin, the Sword Saint — four phases, the hardest fight in the game. Max your stats, bring Pacifying Agents, and use every technique you've learned.", "spoiler": true },
+        { "id": "end-02", "text": "RETURN PATH — FINAL CHOICE: When prompted, give Kuro the Frozen Tears. This triggers the Dragon's Homecoming ending.", "spoiler": true, "returnPath": true },
+        { "id": "end-03", "text": "Watch the ending. Congratulations, Pam.", "spoiler": true }
+      ],
+      "bosses": [
+        {
+          "id": "b-isshin-sword-saint", "name": "Isshin, the Sword Saint", "type": "boss", "spoiler": true,
+          "tip": "Four phases — sword, spear, gun, lightning. Deflect everything, Mikiri the thrusts, jump-counter the sweeps, reverse the lightning in phase 4. The ultimate test of everything Sekiro teaches.",
+          "guideUrls": [
+            { "label": "Easy Kill — All Phases", "url": "https://www.youtube.com/watch?v=hpOeiwg_f2o" },
+            { "label": "Step-by-Step Phase Guide", "url": "https://www.youtube.com/watch?v=eNuyWvXz0CE" }
+          ]
+        }
+      ]
+    }
+  ],
+  "questlineNotes": {
+    "title": "The Frozen Tears — Return Path Summary",
+    "warnings": [
+      "In Ashina Castle Part 2: Do items 1–7, then STOP. Go to Abandoned Dungeon and Senpou Temple (items 1–8) first.",
+      "In Senpou Temple: After item 8, PAUSE. Return to Castle Part 2 to fight Genichiro. Come back for items 9+.",
+      "Stay loyal to Kuro at the Castle Part 4 rooftop (break the iron code). Siding with Owl = Shura ending, forever.",
+      "Collect the Frozen Tears from the Divine Child BEFORE finishing Fountainhead Palace's final bosses.",
+      "At the very end, give Kuro the Frozen Tears — not the Divine Dragon's Tears."
+    ],
+    "videoGuides": [
+      { "label": "Return / Dragon's Homecoming — full ending guide", "url": "https://www.youtube.com/watch?v=uQ_qt2Yies4" },
+      { "label": "Divine Child of Rejuvenation & Frozen Tears walkthrough", "url": "https://www.youtube.com/watch?v=sboPafAKyaw" }
+    ]
+  }
+}
