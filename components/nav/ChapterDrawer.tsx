@@ -31,6 +31,11 @@ export default function ChapterDrawer({ open, onClose, completedIds, currentSlug
     router.push(`/chapter/${slug}`);
   }
 
+  function navigateKnowledge() {
+    onClose();
+    router.push("/knowledge");
+  }
+
   return (
     <AnimatePresence>
       {open && (
@@ -126,6 +131,55 @@ export default function ChapterDrawer({ open, onClose, completedIds, currentSlug
                 padding: "0.5rem 0",
               }}
             >
+              {/* Knowledge link */}
+              <button
+                onClick={navigateKnowledge}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "0.75rem",
+                  width: "100%",
+                  padding: "0.625rem 1.25rem",
+                  background: "none",
+                  border: "none",
+                  borderLeft: "3px solid transparent",
+                  borderBottom: "1px solid #2A2724",
+                  cursor: "pointer",
+                  textAlign: "left",
+                  minHeight: "44px",
+                  marginBottom: "0.25rem",
+                  transition: "background 0.1s",
+                }}
+                onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.04)"; }}
+                onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = "none"; }}
+              >
+                <span style={{ fontSize: "0.85rem", lineHeight: 1, flexShrink: 0 }}>📖</span>
+                <span
+                  style={{
+                    color: "#C8C2B4",
+                    fontSize: "0.8rem",
+                    lineHeight: 1.3,
+                    flex: 1,
+                    fontFamily: "var(--font-sans, sans-serif)",
+                    letterSpacing: "0.02em",
+                  }}
+                >
+                  Knowledge
+                </span>
+                <span
+                  style={{
+                    color: "#9B9488",
+                    fontSize: "0.65rem",
+                    fontFamily: "var(--font-sans, sans-serif)",
+                    letterSpacing: "0.06em",
+                    flexShrink: 0,
+                    textTransform: "uppercase",
+                  }}
+                >
+                  Seeds · Skills
+                </span>
+              </button>
+
               {regions.map((region) => {
                 const done = isChapterDone(region, completedIds);
                 const isCurrent = region.slug === currentSlug;

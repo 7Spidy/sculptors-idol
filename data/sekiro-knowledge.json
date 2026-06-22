@@ -1,0 +1,66 @@
+{
+  "gourdSeeds": [
+    { "id": "seed-01", "order": 1, "location": "Outskirts Wall — Gate Path", "tip": "Defeat the armored general blocking the path. The seed is the reward for the kill — impossible to miss on a normal route." },
+    { "id": "seed-02", "order": 2, "location": "Outskirts Wall — Stairway", "tip": "Clear the chained brute guarding the fog gate, then grapple into the building just behind where he stood. Turn left immediately." },
+    { "id": "seed-03", "order": 3, "location": "Ashina Outskirts — Temple Attic", "tip": "In the building where you first speak with the Tengu, grapple up into the rafters and wall-jump into the hole in the ceiling. The seed is in a chest up there." },
+    { "id": "seed-04", "order": 4, "location": "Ashina Castle Gate — Rooftops", "tip": "After the gate opens, climb the main staircase and grapple onto the high walls beside it to reach the rooftops. Work toward the back-left corner of the main tower for an open window leading to a chest." },
+    { "id": "seed-05", "order": 5, "location": "Ashina Castle — Battlefield Tower", "tip": "Climb the large staircase in the battlefield area to a tower. A merchant on the right side of the tower sells the seed." },
+    { "id": "seed-06", "order": 6, "location": "Ashina Castle — Rooftop Thief", "tip": "Deal with the crow ninjas and guards on the rooftops to reveal a hiding thief. He later relocates to the Dilapidated Temple and sells the seed after enough conversation." },
+    { "id": "seed-07", "order": 7, "location": "Senpou Temple, Mt. Kongo", "tip": "From the upper temple grounds, grapple into the rafters of the large hilltop building and drop through the ceiling hole on the left. Head down the stairs — the seed sits in front of a group of worshipping monks." },
+    { "id": "seed-08", "order": 8, "location": "Sunken Valley — Under-Shrine", "tip": "Push past the riflemen on the upper path until you reach a climbable wall on the left, near a small hut. The seed is up there." },
+    { "id": "seed-09", "order": 9, "location": "Ashina Depths — Mibu Village", "tip": "In the center of the village, at the base of the glowing tree. Guarded by several enemies at once — clear the area first." },
+    { "id": "seed-10", "order": 10, "location": "Fountainhead Palace", "tip": "From the Palace Grounds checkpoint, head into the building and continue to the last room. The seed is in a chest there — hard to miss." }
+  ],
+  "skillTrees": [
+    {
+      "id": "shinobi-arts",
+      "name": "Shinobi Arts",
+      "order": 1,
+      "skills": [
+        { "id": "mikiri-counter", "name": "Mikiri Counter", "priority": "get-first", "note": "Turns unblockable thrust attacks into a guaranteed posture punish. Nearly every fight in the game assumes you have this." },
+        { "id": "shinobi-eyes", "name": "Shinobi Eyes", "priority": "must-have", "note": "Adds a visible cue before dangerous attacks land, on top of the animation tell, so you have more time to react." },
+        { "id": "whirlwind-slash", "name": "Whirlwind Slash", "priority": "must-have", "note": "Hits everything around you at once — great for thinning out grouped trash enemies fast." },
+        { "id": "shinobi-karma-body", "name": "A Shinobi's Karma: Body", "priority": "good-vs", "goodVsLabel": "general survivability", "note": "Small passive Vitality boost. Cheap and worth grabbing whenever a free skill point is sitting idle." },
+        { "id": "breath-of-life-light", "name": "Breath of Life: Light", "priority": "must-have", "note": "Restores some Vitality on a successful deathblow, making aggressive play self-sustaining.", "prerequisite": "Requires Whirlwind Slash and A Shinobi's Karma: Body first." },
+        { "id": "suppressive-deathblow", "name": "Suppressive Deathblow", "priority": "good-vs", "goodVsLabel": "stealth approaches", "note": "Improves the range and reliability of sneak deathblows on unaware enemies." }
+      ]
+    },
+    {
+      "id": "ashina-arts",
+      "name": "Ashina Arts",
+      "order": 2,
+      "skills": [
+        { "id": "ascending-carp", "name": "Ascending Carp", "priority": "get-first", "note": "Increases posture damage dealt on a clean deflect. Foundational for the deflect-and-punish rhythm the whole game is built around." },
+        { "id": "descending-carp", "name": "Descending Carp", "priority": "must-have", "note": "Increases posture damage on the attack immediately following a deflect. Pairs directly with Ascending Carp." },
+        { "id": "ichimonji", "name": "Ichimonji", "priority": "must-have", "note": "Huge single-hit posture damage on a slow wind-up. Best saved for slow, heavily-armored single targets." },
+        { "id": "ichimonji-double", "name": "Ichimonji: Double", "priority": "good-vs", "goodVsLabel": "tough armored bosses", "note": "A faster two-hit follow-up version of Ichimonji once you're comfortable landing the base move.", "prerequisite": "Requires Ichimonji first." },
+        { "id": "mortal-draw", "name": "Mortal Draw", "priority": "good-vs", "goodVsLabel": "aggressive multi-hit duelists", "note": "Punishes opponents who overextend into fast strings. Long startup, so timing matters more than reflex." },
+        { "id": "mid-air-deflection", "name": "Mid-Air Deflection", "priority": "good-vs", "goodVsLabel": "jump-attack and sweep mixes", "note": "Lets you deflect while airborne instead of only blocking, closing a gap most new players don't expect." },
+        { "id": "high-monk", "name": "High Monk", "priority": "good-vs", "goodVsLabel": "sweep-attack enemies", "note": "Turns a successful sweep-jump into a follow-up attack window. More useful once sweeps stop feeling threatening." }
+      ]
+    },
+    {
+      "id": "prosthetic-arts",
+      "name": "Prosthetic Arts",
+      "order": 3,
+      "skills": [
+        { "id": "emmas-medicine-potency", "name": "Emma's Medicine: Potency", "priority": "must-have", "note": "Increases Vitality restored per Healing Gourd use — directly extends your survivability in long fights.", "prerequisite": "Requires Grappling Hook Attack first." },
+        { "id": "loaded-axe", "name": "Loaded Axe", "priority": "good-vs", "goodVsLabel": "shielded enemies", "note": "Breaks through guards that shrug off ordinary sword strikes." },
+        { "id": "loaded-spear", "name": "Loaded Spear", "priority": "good-vs", "goodVsLabel": "distant or evasive enemies", "note": "Pulls enemies in from range and deals solid posture damage on the hit." },
+        { "id": "fang-and-blade", "name": "Fang and Blade", "priority": "good-vs", "goodVsLabel": "general prosthetic combos", "note": "Adds a sword follow-up after a prosthetic hit, extending your combo window." },
+        { "id": "projected-force", "name": "Projected Force", "priority": "good-vs", "goodVsLabel": "groups of weaker enemies", "note": "Situational area tool — more valuable once you've learned specific enemy patterns than as an early pick." }
+      ]
+    },
+    {
+      "id": "mushin-arts",
+      "name": "Mushin Arts",
+      "order": 4,
+      "skills": [
+        { "id": "empowered-ichimonji", "name": "Empowered Ichimonji", "priority": "must-have", "note": "Improves Ichimonji's speed and posture damage — a straight upgrade once available.", "prerequisite": "Requires Ichimonji already learned." },
+        { "id": "empowered-mortal-draw", "name": "Empowered Mortal Draw", "priority": "good-vs", "goodVsLabel": "large single bosses", "note": "Significantly upgrades Mortal Draw's damage and tracking against bigger targets.", "prerequisite": "Requires Mortal Draw already learned." },
+        { "id": "breath-of-life-shadow", "name": "Breath of Life: Shadow", "priority": "must-have", "note": "A stronger version of the Vitality-on-deathblow effect. Very easy to miss — worth prioritizing as soon as Mushin Arts opens up." },
+        { "id": "senpou-leaping-kicks", "name": "Senpou Leaping Kicks", "priority": "good-vs", "goodVsLabel": "enemies who punish ground approaches", "note": "A jumping kick option that closes distance safely.", "prerequisite": "Has multiple skill prerequisites across other trees — naturally a later pickup." }
+      ]
+    }
+  ]
+}
